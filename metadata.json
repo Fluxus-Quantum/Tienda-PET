@@ -1,0 +1,8 @@
+{
+  "name": "Tienda Pets",
+  "description": "Tu tienda de confianza para el bienestar de tus mascotas en Colombia. Alimento, accesorios y servicios expertos.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
