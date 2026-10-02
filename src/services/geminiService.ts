@@ -14,7 +14,7 @@ export async function getPetAdvice(petType: string, age: string, question: strin
     Responde de forma amable, profesional y concisa (máximo 100 palabras). Menciona que siempre es bueno consultar a su veterinario de confianza.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-1.5-flash",
       contents: prompt,
     });
 
