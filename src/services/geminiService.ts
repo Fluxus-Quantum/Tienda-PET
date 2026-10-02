@@ -5,7 +5,7 @@
 
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY || '' });
 
 export async function getPetAdvice(petType: string, age: string, question: string) {
   try {
@@ -14,7 +14,7 @@ export async function getPetAdvice(petType: string, age: string, question: strin
     Responde de forma amable, profesional y concisa (máximo 100 palabras). Menciona que siempre es bueno consultar a su veterinario de confianza.`;
 
     const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
+      model: "gemini-2.0-flash",
       contents: prompt,
     });
 
